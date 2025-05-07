@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>News Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .news-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>News Portal</h1>
+    <div th:each="news : ${newsItems}" class="news-item">
+        <h2 th:text="${news.title}">Title</h2>
+        <p th:text="${news.content}">Content</p>
+    </div>
+</body>
+</html>
